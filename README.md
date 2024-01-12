@@ -1,1 +1,1 @@
-# CodingTest
+# jungle_algorithm
