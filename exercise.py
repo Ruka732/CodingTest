@@ -1,3 +1,3 @@
-a = list(map(str, input().split()))
-
-print(list(a[1]))
+a = [0] * 5
+for i in range(5):
+  print(f'{a[0]:2}')
