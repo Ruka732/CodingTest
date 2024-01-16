@@ -1,5 +1,4 @@
-result = 1
-for i in range(1, 11):
-  result = i * result
+a = 10**11
 
-print(result)
+print(a)
+print(10**11%12)
