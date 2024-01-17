@@ -34,9 +34,9 @@ def bfs(a, b, value, visited):
           visited[nx][ny] = 1
           q.append((nx, ny))
 
-result = 0 
+result = 0
 for i in range(max_num): # 잠기지 않는 영역 찾기
-  visited = [[0] * n for i in range(n)] # 매번 높이를 바꿀 수 있게 visited를 매번 생성
+  visited = [[0] * n for _ in range(n)] # 매번 높이를 바꿀 수 있게 visited를 매번 생성
   cnt = 0
   
   # 브루트 포스

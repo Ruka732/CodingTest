@@ -1,4 +1,5 @@
-a = 10**11
+a, b, c = map(int, input().rsplit())
 
-print(a)
-print(10**11%12)
+print(a**b%c)
+print(a**(b//2)%c)
+print(a**(b//4)%c)
