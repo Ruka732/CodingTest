@@ -21,7 +21,7 @@ def quad(graph, x, y, n):
     result += '1'
   else:
     result += '0'
-  return result[1:]
+  return result
 
 N = int(input())
 graph = [list(map(int, input().rstrip())) for _ in range(N)]
