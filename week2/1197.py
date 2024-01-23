@@ -33,15 +33,16 @@ for start, end, cost in edges:
   sRoot = union_find(start)
   eRoot = union_find(end)
   # union_find
-  if sRoot > eRoot:
-    vertices[sRoot] = eRoot
-  else:
-    vertices[eRoot] = sRoot
-  
-  # 간선을 신장 트리에 추가 - 가중치 담기
-  answer += cost
+  # 사이클이 형성되지 않을 때만
+  if sRoot != eRoot:
+    if sRoot > eRoot:
+      vertices[sRoot] = eRoot
+    else:
+      vertices[eRoot] = sRoot
+    
+    # 간선을 신장 트리에 추가 - 가중치 담기
+    answer += cost
 
 print(answer)
 
 # edges = vertices - 1
-# cycle 여부 판단에 대해서 잘 모르겠다.

@@ -1,4 +1,6 @@
-graph = [[False]*10 for _ in range(10)]
+a = set()
+a.add(5)
+a.add(4)
+a.add(-1)
 
-if not graph[5]:
-    print('hi')
+print(max(a))
