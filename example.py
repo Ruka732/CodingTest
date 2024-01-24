@@ -1,6 +1,5 @@
-a = set()
-a.add(5)
-a.add(4)
-a.add(-1)
+a = [['X'], ['X', 'b'], ['c']]
 
-print(max(a))
+b = list(filter(lambda x: a[x] == 'X', range(len(a))))
+c = a[0].index('b')
+print(c)
