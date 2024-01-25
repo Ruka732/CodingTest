@@ -35,6 +35,8 @@ def bfs(x, y):
   q.append(start[0])
   visited[x][y] = 0
   
+  # 이중 while 문 돌리면서 문제 발생
+  # 물이 먼저 여러 번 차버리거나 고슴도치가 막 두칸씩 움직여버림
   while water_q and q:
       a, b = water_q.popleft()
       x, y = q.popleft()
