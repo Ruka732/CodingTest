@@ -1,31 +1,13 @@
-N, K = map(int, input().split())
-if N >= K :
-  print(0)
-  exit()
+# ‘하나’ 님 팀
 
-elec_list = list(map(int, input().split()))
+책 리뷰 (상황에 따라 유동적으로 선택)
 
-plug = set()
-cnt = 0
+c 문법 공부 (따로)
 
-def find_latest(idx) :
-  result = 0
-  max_idx = -1
-  for num in plug :
-    try :
-      num_idx = elec_list[idx:].index(num)
-    except :
-      num_idx = K
-    if max_idx < num_idx :
-      result, max_idx = num, num_idx
-  
-  return result
-  
-for idx, num in enumerate(elec_list) :
-  plug.add(num)
-  if len(plug) > N :
-    cnt += 1
-    latest_used = find_latest(idx)
-    plug.discard(latest_used)
+공부 키워드 
 
-print(cnt)
+- 이하나님 : 포인터, 포인터의 연산(~2/2 저녁), 링커 (~2/3 저녁전)
+- 추성결님 : 가상화, 동적 메모리 할당, malloc - calloc - realloc(~2/2 저녁), 예외적 흐름 (~2/3 저녁전)
+- 김주민 : GCC, 이진 탐색 트리, 레드 블랙 트리의 삽입/삭제(~2/2 저녁), 가상 메모리 (~2/3 저녁전)
+
+3장 환기 - 2/1 저녁먹고 (성결 귀환 후)
