@@ -1,13 +1,21 @@
-# ‘하나’ 님 팀
+import sys
+import heapq
 
-책 리뷰 (상황에 따라 유동적으로 선택)
+n = int(input())
+cards = []
+for i in range(n):
+    heapq.heappush(cards, int(sys.stdin.readline()))
 
-c 문법 공부 (따로)
+total_cost = 0
+while len(cards) > 1:
+    # 가장 작은 두 카드 묶음을 꺼내서 합칩니다.
+    a = heapq.heappop(cards)
+    b = heapq.heappop(cards)
+    sum_value = a + b
 
-공부 키워드 
+    # 두 묶음을 합친 비용을 누적하고, 합친 결과를 다시 큐에 넣습니다.
+    total_cost += sum_value
+    heapq.heappush(cards, sum_value)
+    print(cards)
 
-- 이하나님 : 포인터, 포인터의 연산(~2/2 저녁), 링커 (~2/3 저녁전)
-- 추성결님 : 가상화, 동적 메모리 할당, malloc - calloc - realloc(~2/2 저녁), 예외적 흐름 (~2/3 저녁전)
-- 김주민 : GCC, 이진 탐색 트리, 레드 블랙 트리의 삽입/삭제(~2/2 저녁), 가상 메모리 (~2/3 저녁전)
-
-3장 환기 - 2/1 저녁먹고 (성결 귀환 후)
+print(total_cost)
